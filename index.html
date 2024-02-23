@@ -4,12 +4,79 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>EnableNow</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <!-- FontAwesome 6.2.0 CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        
+        <!-- (Optional) Use CSS or JS implementation -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+            integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#"><img src="img/logo.png" ></a></div>
+                <div class="navbar-text1">
+                    <span class="enable">Enable</span><span class="now">Now</span>
+                </div>
+                <ul class="links">
+                    <li><a href="hero">Home</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="features">Feature</a></li>
+                    <li><a href="team">Team</a></li>
+                    <li><a href="testimonials">Testimonial</a></li>
+                    <li><a href="pricing">Pricing</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            <a href="#" class="action_btn">FAQ</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+            <div class="dropdown_menu">
+                <li><a href="hero">Home</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="features">Feature</a></li>
+                <li><a href="team">Team</a></li>
+                <li><a href="teastmonials">Testimonial</a></li>
+                <li><a href="pricing">Pricing</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="#" class="action_btn">FAQ</a></li>
+            </div>
+        </header>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropdownMenu = document.querySelector('.dropdown_menu')
         
-    </body>
-</html>
+        
+            toggleBtn.onclick = function () {
+                dropdownMenu.classList.toggle('open')
+                const isOpen = dropdownMenu.classList.contains('open');
+        
+                if (isOpen) {
+                    toggleBtnIcon.classList.remove('fa-bars');
+                    toggleBtnIcon.classList.add('fa-xmark');
+                } else {
+                    toggleBtnIcon.classList.remove('fa-xmark');
+                    toggleBtnIcon.classList.add('fa-bars')
+                }
+            };
+        </script>
+        </body>
+    </html>
